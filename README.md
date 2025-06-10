@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Storyboard AI - Visual Storytelling Platform
 
-## Getting Started
+Transform your stories into visual masterpieces with AI-powered character creation, environment design, and storyboard generation.
 
-First, run the development server:
+## 🚀 Features
 
+- **Magic Link Authentication** via Supabase
+- **Character Creation** with AI fine-tuning support
+- **Environment & Props Management**
+- **Story Builder** with chapter and scene organization
+- **AI-Powered Storyboard Generation**
+- **Credit System** with Free and Pro tiers
+- **Responsive Design** with modern UI/UX
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15, TypeScript, Tailwind CSS
+- **Backend**: Supabase (PostgreSQL, Auth, Storage)
+- **UI Components**: Shadcn/UI, Radix UI
+- **State Management**: TanStack Query
+- **Deployment**: Vercel
+
+## 🏗️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Supabase account
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/DonnieCrewXI/storyboard.git
+cd storyboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Fill in your Supabase credentials:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+```
 
-## Learn More
+4. Set up the database:
+Run the SQL schema in `supabase-schema.sql` in your Supabase SQL editor.
 
-To learn more about Next.js, take a look at the following resources:
+5. Start the development server:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/                 # Next.js app router
+├── components/          # React components
+│   ├── ui/             # Base UI components
+│   ├── auth/           # Authentication components
+│   ├── dashboard/      # Dashboard components
+│   └── landing/        # Landing page components
+├── lib/                # Utility functions and configs
+└── hooks/              # Custom React hooks
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗄️ Database Schema
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application uses Supabase with the following main tables:
+- `profiles` - User accounts and credits
+- `characters` - AI character models
+- `environments` - Scene environments
+- `props` - Story props
+- `stories` - Story projects
+- `chapters` - Story chapters
+- `scenes` - Individual scenes
+
+## 🚀 Deployment
+
+The application is configured for deployment on Vercel:
+
+1. Connect your GitHub repository to Vercel
+2. Set environment variables in Vercel dashboard
+3. Deploy automatically on push to main branch
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 🤝 Contributing
+
+This is a private project. Contact the team for contribution guidelines.
