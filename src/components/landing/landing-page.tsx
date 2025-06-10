@@ -15,7 +15,6 @@ import {
   CheckCircle, 
   ArrowRight,
   Play,
-  Star
 } from 'lucide-react'
 
 export function LandingPage() {
@@ -220,7 +219,7 @@ export function LandingPage() {
             Choose Your Plan
           </h2>
           <p className="text-xl text-gray-600">
-            Start free, upgrade when you're ready to scale
+            Start free, upgrade when you&apos;re ready to scale
           </p>
         </div>
 

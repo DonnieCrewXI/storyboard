@@ -2,15 +2,11 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { 
-  Users, 
-  Palette, 
-  Package, 
-  BookOpen, 
-  Plus,
-  TrendingUp,
-  Clock,
-  Star
+import {
+  Users,
+  Palette,
+  Package,
+  BookOpen
 } from 'lucide-react'
 import Link from 'next/link'
 
@@ -59,7 +55,7 @@ export function DashboardOverview() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        <p className="text-gray-600">Welcome back! Here's what's happening with your projects.</p>
+        <p className="text-gray-600">Welcome back! Here&apos;s what&apos;s happening with your projects.</p>
       </div>
 
       {/* Quick Stats */}
